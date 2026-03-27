@@ -6,7 +6,7 @@ This is a machine learning project that predicts heart disease risk and segments
 
 **Dataset**: UCI Heart Disease Dataset (Real-world clinical data)
 
----
+---check 
 
 ## 🎯 Project Objectives
 
@@ -77,7 +77,52 @@ This is a machine learning project that predicts heart disease risk and segments
 ---
 
 ## 📁 Project Structure
-heart-disease-prediction/ │ ├── data/ │ ├── raw/ │ │ ├── cleveland.data │ │ ├── hungarian.data │ │ ├── long-beach-va.data │ │ ├── switzerland.data │ │ └── heart-disease.names │ └── processed/ │ └── heart_disease_clean.csv │ ├── notebooks/ │ ├── 01_exploratory_analysis.ipynb │ ├── 02_data_preprocessing.ipynb │ ├── 03_model_comparison.ipynb │ └── 04_clustering_insights.ipynb │ ├── src/ │ ├── init.py │ ├── data_preprocessing.py # Shared preprocessing utilities │ ├── feature_engineering.py # Feature scaling, transformation │ ├── 01_logistic_regression.py # Member 1 │ ├── 02_random_forest.py # Member 2 │ ├── 03_svm_classification.py # Member 3 │ ├── 04_kmeans_clustering.py # Member 4 │ └── evaluation.py # Model evaluation metrics │ ├── results/ │ ├── models/ │ │ ├── logistic_regression_model.pkl │ │ ├── random_forest_model.pkl │ │ ├── svm_model.pkl │ │ └── kmeans_model.pkl │ ├── visualizations/ │ │ ├── feature_importance.png │ │ ├── model_comparison.png │ │ └── clustering_results.png │ └── performance_metrics.json │ ├── tests/ │ ├── test_preprocessing.py │ ├── test_logistic_regression.py │ ├── test_random_forest.py │ ├── test_svm.py │ └── test_kmeans.py │ ├── requirements.txt ├── .gitignore ├── setup.py └── README.md
+
+```
+heart-disease-prediction/
+│
+├── Data_set/                          # Raw UCI dataset files
+│   ├── processed.cleveland.data       # Cleveland (303 instances) ✅ used
+│   ├── processed.hungarian.data       # Hungarian (294 instances)
+│   ├── processed.switzerland.data     # Switzerland (123 instances)
+│   ├── processed.va.data              # Long Beach VA (200 instances)
+│   ├── cleveland.data                 # Full Cleveland data
+│   ├── hungarian.data                 # Full Hungarian data
+│   ├── long-beach-va.data             # Full VA data
+│   ├── switzerland.data               # Full Switzerland data
+│   ├── reprocessed.hungarian.data     # Reprocessed Hungarian data
+│   ├── heart-disease.names            # Feature descriptions
+│   ├── new.data
+│   ├── cleve.mod
+│   ├── bak
+│   ├── ask-detrano
+│   ├── WARNING
+│   ├── Index
+│   └── costs/                         # Cost metadata
+│       ├── heart-disease.cost
+│       ├── heart-disease.delay
+│       ├── heart-disease.expense
+│       ├── heart-disease.group
+│       ├── heart-disease.README
+│       └── Index
+│
+├── src/                               # Model scripts
+│   └── 02_random_forest.py            # Member 2 — Random Forest ✅
+│
+├── models/                            # Saved trained models
+│   └── random_forest_model.pkl        # Random Forest model ✅
+│
+├── outputs/                           # Generated outputs
+│   └── random_forest/                 # Random Forest outputs ✅
+│       ├── feature_importance.png
+│       ├── confusion_matrix.png
+│       ├── roc_curve.png
+│       ├── cv_scores.png
+│       ├── top5_features_boxplot.png
+│       └── summary_report.txt
+│
+└── README.md
+```
 
 
 
